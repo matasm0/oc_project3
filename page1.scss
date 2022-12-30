@@ -1,0 +1,41 @@
+@import "stuff";
+
+.background {
+    height: 25vh;
+    width: 100%;
+    
+    background-color: lightgreen;
+}
+
+.main {
+    @include flex(column);
+    
+    padding: $top-padding $side-padding;
+
+    .name {
+        @include flex($just: space-between);
+
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .section {
+        @include flex(column);
+
+        width: 100%;
+        margin-bottom: 40px;
+
+        gap: 20px;
+
+        .title {
+            align-self: flex-start;
+        }
+
+        .item {
+            height: 60px;
+            width: 100%;
+
+            border: 2px solid green;
+        }
+    }
+}

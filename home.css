@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 6vh;
+  border: 2px solid gray;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 25vh;
+  width: 100%;
+  padding: 40px;
+  background-color: gray;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 5vh;
+  width: 100%;
+  background-color: lightgray;
+  gap: 10px;
+}
+
+.hook {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 35vh;
+  width: 100%;
+  padding: 40px;
+  background-color: whitesmoke;
+}
+.hook .small-text {
+  text-align: center;
+}
+.hook button {
+  height: 50px;
+  width: 60%;
+  border-radius: 30px;
+}
+
+.instructions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 45vh;
+  width: 100%;
+  padding: 60px 40px;
+  gap: 40px;
+}
+.instructions .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 20%;
+  width: 90%;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+}
+
+.restaurants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 160vh; /* Should not have*/
+  width: 100%;
+  padding: 60px 40px;
+  gap: 40px;
+}
+.restaurants .title {
+  align-self: flex-start;
+}
+.restaurants .restaurant {
+  height: 20%;
+  width: 90%;
+  border: 2px solid gray;
+  border-radius: 15px;
+}
+.restaurants .restaurant:hover {
+  background-color: whitesmoke;
+}/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 6vh;
+  width: 100%;
+  border: 2px solid gray;
+}
+header button {
+  width: 50px;
+}
+header .logo {
+  text-align: center;
+  padding-right: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 25vh;
+  width: 100%;
+  padding: 40px;
+  background-color: gray;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.background {
+  height: 25vh;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 40px;
+}
+.main .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.main .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+.main .section .title {
+  align-self: flex-start;
+}
+.main .section .item {
+  height: 60px;
+  width: 100%;
+  border: 2px solid green;
+}/*# sourceMappingURL=page1.css.map */

@@ -1,0 +1,80 @@
+@import "stuff";
+
+.location {
+    @include flex();
+
+    height: 5vh;
+    width: 100%;
+
+    background-color: lightgray;
+
+    gap: 10px;
+}
+
+.hook {
+    @include flex(column, $just: space-between);
+
+    height: 35vh;
+    width: 100%;
+    padding: $side-padding;
+
+    background-color: whitesmoke;
+
+    .small-text {
+        text-align: center;
+    }
+
+    button {
+        height: 50px;
+        width: 60%;
+
+        border-radius: 30px;
+    }
+}
+
+.instructions {
+    @include flex(column, space-between, flex-start);
+
+    height: 45vh;
+    width: 100%;
+    padding: $top-padding $side-padding;
+
+    gap: 40px;
+
+    .step {
+        @include flex();
+
+        height: 20%;
+        width: 90%;
+
+        border: 2px solid lightgray;
+        border-radius: 20px;
+    }
+}
+
+.restaurants {
+    @include flex(column, space-between);
+
+    height: 160vh; /* Should not have*/
+    width: 100%;
+    padding: $top-padding $side-padding;
+
+    gap: 40px;
+
+    .title {
+        align-self: flex-start;
+    }
+
+    .restaurant {
+        height: 20%;
+        width: 90%;
+
+        border: 2px solid gray;
+        border-radius: 15px;
+
+        &:hover {
+            background-color: whitesmoke;
+        }
+    }
+}
+

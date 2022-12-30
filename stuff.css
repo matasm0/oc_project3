@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 6vh;
+  width: 100%;
+  border: 2px solid gray;
+}
+header button {
+  width: 50px;
+}
+header .logo {
+  padding-right: 50px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 25vh;
+  width: 100%;
+  padding: 40px;
+  background-color: gray;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}/*# sourceMappingURL=stuff.css.map */

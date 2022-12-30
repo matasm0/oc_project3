@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$side-padding: 40px;
+$top-padding: 60px;
+
+@mixin flex($direction:row, $just:center, $align:center) {
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+header {
+    @include flex($just: space-between);
+
+    height: 6vh;
+    width: 100%;
+    
+    border: 2px solid gray;
+
+    button {
+        width: 50px;
+    }
+    
+    .logo {
+        padding-right: 50px;
+
+        text-align: center;
+    }
+}
+
+footer {
+    @include flex(column, space-between, flex-start);
+
+    height: 25vh;
+    width: 100%;
+    padding: $side-padding;
+
+    background-color: gray;
+
+    .bottom {
+        @include flex(column, space-between, flex-start);
+
+        gap: 10px;
+    }
+}
