@@ -1,12 +1,20 @@
 @import "stuff";
 
+header {
+    box-shadow: 0px 2px 2px 2px lightgray;
+}
+
+header .logo {
+    padding-right: 0;
+}
+
 .location {
     @include flex();
 
-    height: 5vh;
+    height: 45px;
     width: 100%;
 
-    background-color: lightgray;
+    background-color: #e9e9e9;
 
     gap: 10px;
 }
@@ -14,66 +22,195 @@
 .hook {
     @include flex(column, $just: space-between);
 
-    height: 35vh;
+    height: 300px;
     width: 100%;
-    padding: $side-padding;
+    padding: $top-padding $side-padding;
 
     background-color: whitesmoke;
 
-    .small-text {
+    .text {
         text-align: center;
     }
 
     button {
+        @include shadow();
+
         height: 50px;
         width: 60%;
 
         border-radius: 30px;
+        border: none;
+        background-image: linear-gradient(to top left, $primary 10%, $secondary 100%);
+
+        color: white;
+        font-weight: 500;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 .instructions {
     @include flex(column, space-between, flex-start);
 
-    height: 45vh;
+    // height: 50vh;
     width: 100%;
+
     padding: $top-padding $side-padding;
 
-    gap: 40px;
+    gap: 30px;
 
     .step {
-        @include flex();
+        @include flex(row, flex-start, center);
+        @include shadow();
 
-        height: 20%;
-        width: 90%;
+        height: 70px;
+        width: 100%;
+        
+        position: relative;
+        // flex-shrink: 0;
 
-        border: 2px solid lightgray;
+        padding-left: 40px;
+        margin-left: 10px;
+
         border-radius: 20px;
+        background-color: whitesmoke;
+
+        .content {
+            @include flex(row, space-between);
+
+            gap: 20px;
+        }
+
+        .num {
+            @include flex();
+
+            height: 25px;
+            width: 25px;
+
+            position: absolute;
+            left: -10px;
+
+            border-radius: 100px;
+
+            background-color: $other;
+
+            color: white;
+            font-size: 14px;
+        }
     }
 }
 
 .restaurants {
     @include flex(column, space-between);
 
-    height: 160vh; /* Should not have*/
+    // height: 160vh; /* Should not have*/
     width: 100%;
     padding: $top-padding $side-padding;
 
-    gap: 40px;
+    background-color: whitesmoke;
+
+    gap: 20px;
 
     .title {
         align-self: flex-start;
     }
 
     .restaurant {
-        height: 20%;
-        width: 90%;
+        @include shadow();
 
-        border: 2px solid gray;
+        height: 20%;
+        width: 100%;
+
+        position: relative;
+
         border-radius: 15px;
+        overflow: hidden;
+        background-color: white;
 
         &:hover {
             background-color: whitesmoke;
+        }
+
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .bottom {
+            height: 70px;
+        }
+
+        .left {
+            @include flex(column, space-between, flex-start);
+
+            height: 100%;
+            width: 100%;
+
+            padding: 12px;
+
+            .name {
+                font-size: 18px;
+            }
+
+            .loc {
+                font-weight: 300;
+            }
+        }
+
+        .new {
+            @include flex();
+
+            width: 75px;
+            height: 30px;
+
+            position: absolute;
+            top: 15px;
+            right: 15px;
+
+            border-radius: 2px;
+            background-color: $tertiary;
+            box-shadow: 1px 1px 2px 0px gray;
+
+            font-size: 14px;
+            color: teal;
+        }
+
+        .heart {
+            height: 25px;
+            width: 25px;
+
+            position: absolute;
+            right: 20px;
+            bottom: 25px;
+
+            font-size: 25px;
+        }
+
+        .full-heart {
+            @include flex();
+
+            height: 25px;
+            width: 25px;
+
+            position: absolute;
+            right: 20px;
+            bottom: 25px;
+
+            background: linear-gradient(to top left, $primary 10%, $secondary 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            font-size: 0px;
+
+            transition: all 150ms;
+
+            &:hover {
+                font-size: 25px;
+                cursor: pointer;
+            }
         }
     }
 }

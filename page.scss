@@ -1,0 +1,119 @@
+@import "stuff";
+
+$top-padding: 40px;
+
+.background {
+    height: 30vh;
+    width: 100%;
+    
+    background-image: url("./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-size: contain;
+}
+
+.main {
+    @include flex(column);
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    padding: $top-padding $side-padding;
+    margin-top: -50px;
+
+    border-radius: 50px;
+
+    background-color: whitesmoke;
+
+    .name {
+        @include flex($just: space-between);
+
+        width: 100%;
+        margin-bottom: 40px;
+
+        .text {
+            font-family: "Shrikhand";
+            font-size: 30px;
+        }
+    }
+
+    .section {
+        @include flex(column);
+
+        width: 100%;
+        margin-bottom: 40px;
+
+        gap: 20px;
+
+        .title {
+            align-self: flex-start;
+
+            font-weight: 300;
+
+            .underline {
+                width: 40px;
+
+                margin-top: 5px;
+                
+                border-bottom: 3px solid $tertiary;
+                background-color: $tertiary;
+            }
+        }
+
+        .item {
+            @include flex(row, space-between, center);
+            @include shadow();
+
+            height: 70px;
+            width: 100%;
+
+            padding: 10px 15px;
+
+            border-radius: 20px;
+            background-color: white;
+
+            overflow: hidden;
+
+            .left {
+                @include flex(column, space-between, flex-start);
+
+                height: 100%;
+                width: 100%;
+
+                .title {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .desc {
+                    font-weight: 300;
+                }
+            }
+
+            .right {
+                height: 100%;
+
+                align-self: flex-end;
+
+                display: flex;
+
+                .price {
+                    align-self: flex-end;
+
+                    font-weight: 500;
+                }
+            }
+
+            .check {
+                height: 100%;
+                width: 0;
+
+                overflow: hidden;
+
+                transition: all 200ms;
+            }
+
+            &:hover .check {
+                width: 50px;
+            }
+        }
+    }
+}
