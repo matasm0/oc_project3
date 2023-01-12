@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -313,7 +314,27 @@ template {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Shrikhand";
+  font-family: "Roboto";
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.title-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.med-text {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.small-text {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 header {
@@ -321,11 +342,12 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  height: 7vh;
+  height: 60px;
   width: 100%;
-  border: 2px solid gray;
+  position: relative;
+  z-index: 1;
 }
-header button {
+header a {
   width: 50px;
 }
 header .logo {
@@ -344,10 +366,16 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  height: 25vh;
+  height: 200px;
   width: 100%;
-  padding: 40px;
-  background-color: gray;
+  padding: 30px;
+  background-color: #383838;
+}
+footer .text {
+  color: white;
+}
+footer .footer-logo {
+  font-family: "Shrikhand";
 }
 footer .bottom {
   display: flex;
@@ -357,10 +385,25 @@ footer .bottom {
   gap: 10px;
 }
 
+@media (min-width: 1000px) {
+  footer {
+    height: auto;
+    padding: 30px 50px;
+    gap: 25px;
+  }
+  footer .bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+  }
+}
 .background {
-  height: 30vh;
+  height: 280px;
   width: 100%;
-  background-color: lightgreen;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main {
@@ -371,9 +414,10 @@ footer .bottom {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: 60px 40px;
+  padding: 40px 30px;
   margin-top: -50px;
-  border-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   background-color: whitesmoke;
 }
 .main .name {
@@ -384,7 +428,14 @@ footer .bottom {
   width: 100%;
   margin-bottom: 40px;
 }
-.main .section {
+.main .name .text {
+  font-family: "Shrikhand";
+  font-size: 30px;
+}
+.main .sections {
+  width: 100%;
+}
+.main .sections .section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -393,29 +444,122 @@ footer .bottom {
   margin-bottom: 40px;
   gap: 20px;
 }
-.main .section .title {
+.main .sections .section .title {
   align-self: flex-start;
+  font-weight: 300;
 }
-.main .section .title .underline {
+.main .sections .section .title .underline {
   width: 40px;
-  border: 2px solid cyan;
-  background-color: cyan;
+  margin-top: 5px;
+  border-bottom: 3px solid #99E2D0;
+  background-color: #99E2D0;
 }
-.main .section .item {
+.main .sections .section .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  height: 60px;
+  box-shadow: 2px 3px 10px 2px lightgray;
+  height: 70px;
   width: 100%;
   padding: 10px 15px;
-  border: 2px solid green;
   border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
 }
-.main .section .item .right {
+.main .sections .section .item .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   height: 100%;
+  width: 100%;
+}
+.main .sections .section .item .left .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .sections .section .item .left .desc {
+  font-weight: 300;
+}
+.main .sections .section .item .right {
+  height: 100%;
+  align-self: flex-end;
   display: flex;
 }
-.main .section .item .right .price {
+.main .sections .section .item .right .price {
   align-self: flex-end;
+  font-weight: 500;
+}
+.main .sections .section .item .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 160%;
+  width: 0;
+  position: relative;
+  margin-left: 20px;
+  margin-right: -15px;
+  background-color: #99E2D0;
+  overflow: hidden;
+  transition: all 400ms;
+}
+.main .sections .section .item .icon {
+  position: absolute;
+  left: 23px;
+  font-size: 24px;
+  color: white;
+}
+.main .sections .section .item:hover .check {
+  width: 90px;
+}
+.main .sections .section .item:hover .icon {
+  transition: all 500ms;
+  transform: rotate(360deg);
+}
+.main .order {
+  box-shadow: 2px 3px 10px 2px lightgray;
+  height: 50px;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(to top left, #9356DC 10%, #FF79DA 100%);
+  color: white;
+}
+
+@media (min-width: 1000px) {
+  .background {
+    height: 400px;
+    -o-object-position: 80% 50%;
+       object-position: 80% 50%;
+  }
+  .main {
+    padding: 70px 70px;
+    background-color: white;
+  }
+  .main .name {
+    margin-bottom: 60px;
+  }
+  .main .sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main .sections .section {
+    box-shadow: 2px 3px 10px 2px lightgray;
+    width: 31%;
+    flex-shrink: 0;
+    padding: 40px 30px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    gap: 40px;
+  }
+  .main .sections .section .item {
+    height: 80px;
+  }
 }/*# sourceMappingURL=page2.css.map */

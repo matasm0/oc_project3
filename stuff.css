@@ -347,7 +347,7 @@ header {
   position: relative;
   z-index: 1;
 }
-header button {
+header a {
   width: 50px;
 }
 header .logo {
@@ -383,4 +383,19 @@ footer .bottom {
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
+}
+
+@media (min-width: 700px) {
+  footer {
+    height: auto;
+    padding: 30px 50px;
+    gap: 25px;
+  }
+  footer .bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+  }
 }/*# sourceMappingURL=stuff.css.map */

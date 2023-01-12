@@ -9,6 +9,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="load">
+        <div class="spinner"></div>
+    </div>
     <header>
         <!-- <div class="logo logo-text">ohmyfood</div> -->
         <img src="./images/logo/ohmyfood.png" alt="logo" class="logo">
@@ -17,102 +20,106 @@
         <i class="fa-solid fa-location-dot"></i>
         <p class="text small-text">Paris, Belleville</p>
     </div>
-    <div class="hook">
-        <p class="title title-text">Book the menu you like</p>
-        <p class="text med-text">Discover top-of-the-art restaurants we picked for you</p>
-        <button class="explore small-text white-text">Explore our restaurants</button>
-    </div>
-    <div class="instructions">
-        <p class="title title-text">How it works</p>
-        <div class="step" id="step-1">
+    <div class="top">
+        <div class="hook">
+            <p class="title title-text">Book the menu you like</p>
+            <p class="text med-text">Discover top-of-the-art restaurants we picked for you</p>
+            <button class="explore small-text white-text">Explore our restaurants</button>
+        </div>
+        <div class="instructions">
+            <p class="title title-text">How it works</p>
+            <div class="step" id="step-1">
+                <div class="content">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <p class="text small-text">Choose a restaurant</p>
+                </div>
+                <div class="num small-text">1</div>
+            </div>
+            <div class="step" id="step-2">
             <div class="content">
-                <i class="fa-solid fa-mobile-screen"></i>
-                <p class="text small-text">Choose a restaurant</p>
+                    <i class="fa-solid fa-list"></i>
+                    <p class="text small-text">Create your menu</p>
+                </div>
+                <div class="num small-text">2</div>
             </div>
-            <div class="num small-text">1</div>
-        </div>
-        <div class="step" id="step-2">
-           <div class="content">
-                <i class="fa-solid fa-list"></i>
-                <p class="text small-text">Create your menu</p>
+            <div class="step" id="step-3">
+                <div class="content">
+                    <i class="fa-solid fa-store"></i>
+                    <p class="text small-text">Go enjoy it at the restaurant</p>
+                </div>
+                <div class="num small-text">3</div>
             </div>
-            <div class="num small-text">2</div>
-        </div>
-        <div class="step" id="step-3">
-            <div class="content">
-                <i class="fa-solid fa-store"></i>
-                <p class="text small-text">Go enjoy it at the restaurant</p>
-            </div>
-            <div class="num small-text">3</div>
         </div>
     </div>
-    <div class="restaurants">
-        <div class="title title-text">Restaurants</div>
-        <div class="restaurant">
-            <a href="page3.html">
-                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="res-img">
-                <div class="bottom">
-                    <div class="left">
-                        <p class="name small-text"><b>The Full Palette</b></p>
-                        <p class="loc small-text">New York</p>
+    <div class="restaurant-wrapper">
+        <div class="restaurants">
+            <div class="title title-text">Restaurants</div>
+            <div class="restaurant">
+                <a href="page3.html">
+                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="res-img">
+                    <div class="bottom">
+                        <div class="left">
+                            <p class="name small-text"><b>The Full Palette</b></p>
+                            <p class="loc small-text">New York</p>
+                        </div>
+                        <div class="right">
+                            <i class="add-fa"></i>
+                        </div>
                     </div>
-                    <div class="right">
-                        <i class="add-fa"></i>
+                    <div class="new small-text">New</div>
+                </a>
+                <i class="fa-regular fa-heart heart"></i>
+                <i class="fa-solid fa-heart full-heart"></i>
+            </div>
+            <div class="restaurant">
+                <a href="page2.html">
+                    <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" class="res-img">
+                    <div class="bottom">
+                        <div class="left">
+                            <p class="name small-text"><b>The Enchanted Plate</b></p>
+                            <p class="loc small-text">New York</p>
+                        </div>
+                        <div class="right">
+                            <i class="add-fa"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="new small-text">New</div>
-            </a>
-            <i class="fa-regular fa-heart heart"></i>
-            <i class="fa-solid fa-heart full-heart"></i>
-        </div>
-        <div class="restaurant">
-            <a href="page2.html">
-                <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" class="res-img">
-                <div class="bottom">
-                    <div class="left">
-                        <p class="name small-text"><b>The Enchanted Plate</b></p>
-                        <p class="loc small-text">New York</p>
+                    <div class="new small-text">New</div>
+                </a>
+                <i class="fa-regular fa-heart heart"></i>
+                <i class="fa-solid fa-heart full-heart"></i>
+            </div>
+            <div class="restaurant">
+                <a href="page1.html">
+                    <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="res-img">
+                    <div class="bottom">
+                        <div class="left">
+                            <p class="name small-text"><b>Bastille</b></p>
+                            <p class="loc small-text">New York</p>
+                        </div>
+                        <div class="right small-text">
+                            <i class="add-fa"></i>
+                        </div>
                     </div>
-                    <div class="right">
-                        <i class="add-fa"></i>
+                </a>
+                <i class="fa-regular fa-heart heart"></i>
+                <i class="fa-solid fa-heart full-heart"></i>
+            </div>
+            <div class="restaurant">
+                <a href="page4.html">
+                    <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="res-img">
+                    <div class="bottom">
+                        <div class="left">
+                            <p class="name small-text"><b>Le Gourmand</b></p>
+                            <p class="loc small-text">New York</p>
+                        </div>
+                        <div class="right">
+                            <i class="add-fa"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="new small-text">New</div>
-            </a>
-            <i class="fa-regular fa-heart heart"></i>
-            <i class="fa-solid fa-heart full-heart"></i>
-        </div>
-        <div class="restaurant">
-            <a href="page1.html">
-                <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="res-img">
-                <div class="bottom">
-                    <div class="left">
-                        <p class="name small-text"><b>Bastille</b></p>
-                        <p class="loc small-text">New York</p>
-                    </div>
-                    <div class="right small-text">
-                        <i class="add-fa"></i>
-                    </div>
-                </div>
-            </a>
-            <i class="fa-regular fa-heart heart"></i>
-            <i class="fa-solid fa-heart full-heart"></i>
-        </div>
-        <div class="restaurant">
-            <a href="page4.html">
-                <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="res-img">
-                <div class="bottom">
-                    <div class="left">
-                        <p class="name small-text"><b>Le Gourmand</b></p>
-                        <p class="loc small-text">New York</p>
-                    </div>
-                    <div class="right">
-                        <i class="add-fa"></i>
-                    </div>
-                </div>
-            </a>
-            <i class="fa-regular fa-heart heart"></i>
-            <i class="fa-solid fa-heart full-heart"></i>
+                </a>
+                <i class="fa-regular fa-heart heart"></i>
+                <i class="fa-solid fa-heart full-heart"></i>
+            </div>
         </div>
     </div>
     <footer>

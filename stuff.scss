@@ -61,7 +61,7 @@ header {
     position: relative;
     z-index: 1;
 
-    button {
+    a {
         width: $back-button-width;
     }
     
@@ -101,5 +101,21 @@ footer {
         @include flex(column, space-between, flex-start);
 
         gap: 10px;
+    }
+}
+
+@media(min-width: 700px) {
+    footer {
+        height: auto;
+
+        padding: 30px 50px;
+
+        gap: 25px;
+
+        .bottom {
+            @include flex(row, flex-start, center);
+
+            gap: 60px;
+        }
     }
 }
