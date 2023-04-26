@@ -65,6 +65,41 @@ $top-padding: 40px;
             font-family: "Shrikhand";
             font-size: 30px;
         }
+
+        .heart {
+            height: 25px;
+            width: 25px;
+
+            position: absolute;
+            right: 50px;
+            top: 40px;
+
+            font-size: 25px;
+        }
+
+        .full-heart {
+            @include flex();
+
+            height: 25px;
+            width: 25px;
+
+            position: absolute;
+            right: 50px;
+            top: 40px;
+
+            background: linear-gradient(to top left, $primary 10%, $secondary 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            font-size: 0px;
+
+            transition: all 150ms;
+
+            &:hover {
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
     }
 
     .sections {
@@ -213,6 +248,14 @@ $top-padding: 40px;
 
         .name {
             margin-bottom: 40px;
+            .heart {
+                right: 60px;
+                top: 75px;
+            }
+            .full-heart {
+                right: 60px;
+                top: 75px;
+            }
         }
 
         .sections {
@@ -240,7 +283,6 @@ $top-padding: 40px;
                 margin-bottom: 0;
 
                 border-radius: 30px;
-                background-color: none;
 
                 gap: 40px;
 
