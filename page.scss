@@ -1,5 +1,31 @@
 @import "stuff";
 
+@keyframes menu-load {
+    0% {
+        margin-top: 20px;
+        margin-bottom: -20px;
+        opacity: 0%;
+    }
+    20% {
+        margin-top: 20px;
+        margin-bottom: -20px;
+        opacity: 0%;
+    }
+    100% {
+        margin-top: 0;
+        margin-bottom: 0;
+        opacity: 100%;
+    }
+}
+
+@mixin anim($num-children: 3) {
+    @for $i from 0 to $num-children + 1 {
+        .item:nth-child(#{$i + 1}) {
+            animation: #{$i / 2}s menu-load;
+        }
+    }
+}
+
 $top-padding: 40px;
 
 .background {
@@ -7,6 +33,11 @@ $top-padding: 40px;
     width: 100%;
 
     object-fit: cover;
+}
+
+.back {
+    padding-left: 10px;
+    font-weight: bold;
 }
 
 .main {
@@ -75,6 +106,8 @@ $top-padding: 40px;
                 background-color: white;
 
                 overflow: hidden;
+
+                cursor: pointer;
 
                 .left {
                     @include flex(column, space-between, flex-start);
@@ -179,17 +212,23 @@ $top-padding: 40px;
         background-color: white;
 
         .name {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         .sections {
             @include flex(row, space-between, flex-start);
+            @include shadow();
+
+            margin-bottom: 30px;
+
+            background-color: whitesmoke;
+            border-radius: 30px;
 
             flex-wrap: wrap;
 
             .section {
                 @include flex(column, flex-start, center);
-                @include shadow();
+                // @include shadow();
 
                 width: 31%;
                 height: 100%;
@@ -198,16 +237,38 @@ $top-padding: 40px;
                 
                 padding: 40px 2vw;
                 padding-bottom: 70px;
+                margin-bottom: 0;
 
                 border-radius: 30px;
-                background-color: whitesmoke;
+                background-color: none;
 
                 gap: 40px;
 
                 .item {
+                    // height: auto;
+                    // min-height: 80px;
                     height: 80px;
+
+                    .left {
+                        width: 90%;
+                        min-width: 0;
+                        // overflow: hidden;
+                        // white-space: nowrap;
+
+                        .title,
+                        .desc {
+                            width: 100%;
+
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    } 
                 }
             }
+        }
+        .order {
+            margin-bottom: 0;
         }
     }
 }
