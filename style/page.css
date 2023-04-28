@@ -474,24 +474,24 @@ footer .bottom {
   font-family: "Shrikhand";
   font-size: 30px;
 }
-.main .name .heart {
+.main .name .heart-container {
   height: 25px;
   width: 25px;
+}
+.main .name .heart-container .heart {
   position: absolute;
-  right: 50px;
-  top: 40px;
+  height: 25px;
+  width: 25px;
   font-size: 25px;
 }
-.main .name .full-heart {
+.main .name .heart-container .full-heart {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: absolute;
   height: 25px;
   width: 25px;
-  position: absolute;
-  right: 50px;
-  top: 40px;
   background: linear-gradient(to top left, #9356DC 10%, #FF79DA 100%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -499,7 +499,7 @@ footer .bottom {
   font-size: 0px;
   transition: all 150ms;
 }
-.main .name .full-heart:hover {
+.main .name .heart-container .full-heart:hover {
   font-size: 25px;
   cursor: pointer;
 }
@@ -545,7 +545,16 @@ footer .bottom {
   align-items: flex-start;
   flex-direction: column;
   height: 100%;
+  width: 90%;
+  min-width: 0;
+  padding-right: 10px;
+}
+.main .sections .section .item .left .title,
+.main .sections .section .item .left .desc {
   width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .main .sections .section .item .left .title {
   font-size: 18px;
@@ -602,6 +611,10 @@ footer .bottom {
   cursor: pointer;
   color: white;
 }
+.main .order:hover {
+  background-image: linear-gradient(to top left, #9356DC 20%, #FF79DA 60%);
+  box-shadow: 2px 3px 10px 2px gray;
+}
 
 @media (min-width: 1000px) {
   .background {
@@ -651,17 +664,6 @@ footer .bottom {
   }
   .main .sections .section .item {
     height: 80px;
-  }
-  .main .sections .section .item .left {
-    width: 90%;
-    min-width: 0;
-  }
-  .main .sections .section .item .left .title,
-  .main .sections .section .item .left .desc {
-    width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
   }
   .main .order {
     margin-bottom: 0;

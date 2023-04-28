@@ -509,6 +509,8 @@ header .logo {
 }
 .hook button:hover {
   cursor: pointer;
+  background-image: linear-gradient(to top left, #9356DC 20%, #FF79DA 60%);
+  box-shadow: 2px 3px 10px 2px gray;
 }
 
 .instructions {

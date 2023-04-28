@@ -110,6 +110,8 @@ header .logo {
 
         &:hover {
             cursor: pointer;
+            background-image: linear-gradient(to top left, $primary 20%, $secondary 60%);
+            box-shadow: 2px 3px 10px 2px gray;
         }
     }
 }

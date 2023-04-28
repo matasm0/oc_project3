@@ -68,38 +68,39 @@ $top-padding: 40px;
             font-size: 30px;
         }
 
-        .heart {
+        .heart-container {
             height: 25px;
             width: 25px;
 
-            position: absolute;
-            right: 50px;
-            top: 40px;
+            .heart {
+                position: absolute;
 
-            font-size: 25px;
-        }
-
-        .full-heart {
-            @include flex();
-
-            height: 25px;
-            width: 25px;
-
-            position: absolute;
-            right: 50px;
-            top: 40px;
-
-            background: linear-gradient(to top left, $primary 10%, $secondary 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            font-size: 0px;
-
-            transition: all 150ms;
-
-            &:hover {
+                height: 25px;
+                width: 25px;
+    
                 font-size: 25px;
-                cursor: pointer;
+            }
+    
+            .full-heart {
+                @include flex();
+
+                position: absolute;
+    
+                height: 25px;
+                width: 25px;
+    
+                background: linear-gradient(to top left, $primary 10%, $secondary 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+                font-size: 0px;
+    
+                transition: all 150ms;
+    
+                &:hover {
+                    font-size: 25px;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -150,8 +151,19 @@ $top-padding: 40px;
                     @include flex(column, space-between, flex-start);
 
                     height: 100%;
-                    width: 100%;
+                    width: 90%;
+                    min-width: 0;
 
+                    padding-right: 10px;
+
+                    .title,
+                    .desc {
+                        width: 100%;
+
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
                     .title {
                         font-size: 18px;
                         font-weight: 500;
@@ -231,6 +243,10 @@ $top-padding: 40px;
         cursor: pointer;
 
         color: white;
+        &:hover {
+            background-image: linear-gradient(to top left, $primary 20%, $secondary 60%);
+            box-shadow: 2px 3px 10px 2px gray;
+        }
     }
 }
 
@@ -292,22 +308,6 @@ $top-padding: 40px;
                     // height: auto;
                     // min-height: 80px;
                     height: 80px;
-
-                    .left {
-                        width: 90%;
-                        min-width: 0;
-                        // overflow: hidden;
-                        // white-space: nowrap;
-
-                        .title,
-                        .desc {
-                            width: 100%;
-
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space: nowrap;
-                        }
-                    } 
                 }
             }
         }
