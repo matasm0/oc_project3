@@ -58,14 +58,10 @@
         height: 0;
         width: 50px;
 
-        background-color: green;
+        background-color: $tertiary;
         animation: 4s spi, 2.5s spinner;
     }
 }
-
-// body {
-//     animation: 3s load-in;
-// }
 
 header {
     box-shadow: 0px 2px 2px 2px lightgray;

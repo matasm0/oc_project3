@@ -448,7 +448,7 @@ footer .bottom {
   animation: 4s spi;
   height: 0;
   width: 50px;
-  background-color: green;
+  background-color: #99E2D0;
   animation: 4s spi, 2.5s spinner;
 }
 @keyframes spi {

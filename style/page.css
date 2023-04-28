@@ -416,6 +416,26 @@ footer .bottom {
     opacity: 100%;
   }
 }
+.item:nth-child(1) {
+  animation: 0s menu-load;
+}
+
+.item:nth-child(2) {
+  animation: 0.5s menu-load;
+}
+
+.item:nth-child(3) {
+  animation: 1s menu-load;
+}
+
+.item:nth-child(4) {
+  animation: 1.5s menu-load;
+}
+
+.item:nth-child(5) {
+  animation: 2s menu-load;
+}
+
 .background {
   height: 280px;
   width: 100%;
